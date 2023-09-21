@@ -466,12 +466,12 @@ app.use(bodyParser.text({ type: 'text/html' }))
 
 [MIT](LICENSE)
 
-[ci-image]: https://badgen.net/github/checks/expressjs/body-parser/master?label=ci
-[ci-url]: https://github.com/expressjs/body-parser/actions/workflows/ci.yml
-[coveralls-image]: https://badgen.net/coveralls/c/github/expressjs/body-parser/master
-[coveralls-url]: https://coveralls.io/r/expressjs/body-parser?branch=master
-[node-version-image]: https://badgen.net/npm/node/body-parser
+[ci-image]: https://badgen.net/github/checks/theogravity/secure-body-parser/master?label=ci
+[ci-url]: https://github.com/theogravity/secure-body-parser/actions/workflows/ci.yml
+[coveralls-image]: https://badgen.net/coveralls/c/github/theogravity/secure-body-parser/master
+[coveralls-url]: https://coveralls.io/r/theogravity/secure-body-parser?branch=master
+[node-version-image]: https://badgen.net/npm/node/secure-body-parser
 [node-version-url]: https://nodejs.org/en/download
-[npm-downloads-image]: https://badgen.net/npm/dm/body-parser
-[npm-url]: https://npmjs.org/package/body-parser
-[npm-version-image]: https://badgen.net/npm/v/body-parser
+[npm-downloads-image]: https://badgen.net/npm/dm/secure-body-parser
+[npm-url]: https://npmjs.org/package/secure-body-parser
+[npm-version-image]: https://badgen.net/npm/v/secure-body-parser
