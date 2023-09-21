@@ -1,4 +1,4 @@
-1.20.3 / 2023-09-21
+1.20.4 / 2023-09-21
 ===================
   * Replace `JSON.parse()` in `json.js` with `secure-json-parse` versions.
 

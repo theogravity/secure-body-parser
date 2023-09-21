@@ -1,7 +1,7 @@
 {
   "name": "secure-body-parser",
   "description": "Node.js body parsing middleware",
-  "version": "1.20.3",
+  "version": "1.20.4",
   "contributors": [
     "Douglas Christopher Wilson <doug@somethingdoug.com>",
     "Jonathan Ong <me@jongleberry.com> (http://jongleberry.com)"
@@ -53,5 +53,6 @@
     "test": "mocha --require test/support/env --reporter spec --check-leaks --bail test/",
     "test-ci": "nyc --reporter=lcov --reporter=text npm test",
     "test-cov": "nyc --reporter=html --reporter=text npm test"
-  }
+  },
+  "keywords": ["express", "secure", "body", "parser", "json", "urlencoded", "multipart", "form-data", "raw", "middleware"]
 }

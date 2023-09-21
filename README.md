@@ -8,7 +8,7 @@
 Node.js body parsing middleware. 
 
 Forked version of the [`body-parser`](https://github.com/expressjs/body-parser) project
-where [`secure-json-parse`](https://github.com/fastify/secure-json-parse) is used instead of `JSON.parse()` for the `json()` parser.
+where [`secure-json-parse`](https://github.com/fastify/secure-json-parse) is used instead of `JSON.parse()` for the `json()` parser and adds a `secureParseOptions` option to the `bodyParser.json` configuration.
 
 Addresses [implement a __proto__ check option](https://github.com/expressjs/body-parser/issues/347).
 
@@ -124,6 +124,11 @@ The `verify` option, if supplied, is called as `verify(req, res, buf, encoding)`
 where `buf` is a `Buffer` of the raw request body and `encoding` is the
 encoding of the request. The parsing can be aborted by throwing an error.
 
+##### secureParseOptions
+
+The `secureParseOptions` option corresponds
+to the [sjson.parse()](https://github.com/fastify/secure-json-parse#sjsonparsetext-reviver-options) configuration.
+
 ### bodyParser.raw([options])
 
 Returns middleware that parses all bodies as a `Buffer` and only looks at
@@ -133,11 +138,6 @@ parser supports automatic inflation of `gzip` and `deflate` encodings.
 A new `body` object containing the parsed data is populated on the `request`
 object after the middleware (i.e. `req.body`). This will be a `Buffer` object
 of the body.
-
-### secureParseOptions
-
-The `secureParseOptions` function takes an optional `options` object that corresponds
-to the [sjson.parse()](https://github.com/fastify/secure-json-parse#sjsonparsetext-reviver-options) options.
 
 #### Options
 
