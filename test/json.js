@@ -710,6 +710,16 @@ describe('bodyParser.json()', function () {
       test.expect(413, done)
     })
   })
+
+  describe('prototype poisoning', function () {
+    it('should not allow prototype pollution', function (done) {
+      request(createServer())
+        .post('/')
+        .set('Content-Type', 'application/json')
+        .send('{"__proto__":{"oops":"It works !"}}')
+        .expect(400, done)
+    })
+  })
 })
 
 function createServer (opts) {

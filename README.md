@@ -1,11 +1,16 @@
-# body-parser
+# secure-body-parser
 
 [![NPM Version][npm-version-image]][npm-url]
 [![NPM Downloads][npm-downloads-image]][npm-url]
 [![Build Status][ci-image]][ci-url]
 [![Test Coverage][coveralls-image]][coveralls-url]
 
-Node.js body parsing middleware.
+Node.js body parsing middleware. 
+
+Forked version of the [`body-parser`](https://github.com/expressjs/body-parser) project
+where [`secure-json-parse`](https://github.com/fastify/secure-json-parse) is used instead of `JSON.parse()` for the `json()` parser.
+
+Addresses [implement a __proto__ check option](https://github.com/expressjs/body-parser/issues/347).
 
 Parse incoming request bodies in a middleware before your handlers, available
 under the `req.body` property.
@@ -63,6 +68,8 @@ The various errors returned by this module are described in the
 [errors section](#errors).
 
 ### bodyParser.json([options])
+
+*Uses `secure-json-parse` to parse the text as JSON in place of `JSON.parse()`.*
 
 Returns middleware that only parses `json` and only looks at requests where
 the `Content-Type` header matches the `type` option. This parser accepts any
@@ -126,6 +133,11 @@ parser supports automatic inflation of `gzip` and `deflate` encodings.
 A new `body` object containing the parsed data is populated on the `request`
 object after the middleware (i.e. `req.body`). This will be a `Buffer` object
 of the body.
+
+### secureParseOptions
+
+The `secureParseOptions` function takes an optional `options` object that corresponds
+to the [sjson.parse()](https://github.com/fastify/secure-json-parse#sjsonparsetext-reviver-options) options.
 
 #### Options
 
