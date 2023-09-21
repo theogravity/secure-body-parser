@@ -1,5 +1,11 @@
+1.20.5 / 2023-09-21
+===================
+
+  * Add typescript support
+
 1.20.4 / 2023-09-21
 ===================
+
   * Replace `JSON.parse()` in `json.js` with `secure-json-parse` versions.
 
 1.20.2 / 2023-02-21
