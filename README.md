@@ -49,13 +49,13 @@ Other body parsers you might be interested in:
 ## Installation
 
 ```sh
-$ npm install body-parser
+$ npm install secure-body-parser
 ```
 
 ## API
 
 ```js
-var bodyParser = require('body-parser')
+var bodyParser = require('secure-body-parser')
 ```
 
 The `bodyParser` object exposes various factories to create middlewares. All
@@ -395,7 +395,7 @@ This is the simplest setup.
 
 ```js
 var express = require('express')
-var bodyParser = require('body-parser')
+var bodyParser = require('secure-body-parser')
 
 var app = express()
 
@@ -420,7 +420,7 @@ Express.
 
 ```js
 var express = require('express')
-var bodyParser = require('body-parser')
+var bodyParser = require('secure-body-parser')
 
 var app = express()
 
@@ -448,7 +448,7 @@ All the parsers accept a `type` option which allows you to change the
 
 ```js
 var express = require('express')
-var bodyParser = require('body-parser')
+var bodyParser = require('secure-body-parser')
 
 var app = express()
 
